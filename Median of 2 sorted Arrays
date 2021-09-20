@@ -1,0 +1,31 @@
+ 
+        nums3=[]
+        j=0
+        k=0
+        while(j<len(nums1) and k<len(nums2)):
+            if(nums1[j]<nums2[k]):
+                nums3.append(nums1[j])
+                j+=1
+            else:
+                nums3.append(nums2[k])
+                k+=1
+        while(j<len(nums1)):
+            nums3.append(nums1[j])
+            j+=1
+        while(k<len(nums2)):
+            nums3.append(nums2[k])
+            k+=1        
+      
+        h=int(len(nums3)/2)
+        print(nums3)
+        print(h)
+        if(len(nums3)%2!=0):
+            return nums3[h]
+        else:
+            return (nums3[h]+nums3[h-1])/2
+                
+                
+            
+                
+            
+        
